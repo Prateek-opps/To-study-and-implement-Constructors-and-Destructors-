@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+int count = 0;
+class destruct {
+public:
+    destruct() {
+        count++;
+        cout << "Number of objects created: " << count << endl;
+    }
+    ~destruct() {
+        count--;
+        cout << "Number of objects destroyed: " << count << endl;
+    }
+};
+int main() {
+    destruct d1, d2, d3;
+    {
+        destruct d4;
+    }
+    return 0;
+}
+/*Output:-
+Number of objects created: 1
+Number of objects created: 2
+Number of objects created: 3
+Number of objects created: 4
+Number of objects destroyed: 3
+Number of objects destroyed: 2
+Number of objects destroyed: 1
+Number of objects destroyed: 0
+*/
