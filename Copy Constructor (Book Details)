@@ -3,7 +3,43 @@ Prateek Sinha
 24070123077
 ENTC A3
 
-
+#include <iostream>
+using namespace std;
+class Book {
+    string Book_name;
+    string Author_name;
+    int Price;
+public:
+    // Parametric constructor
+    Book(string b, string a, int p) {
+        Book_name = b;
+        Author_name = a;
+        Price = p;
+    }
+    // Copy Constructor
+    Book(const Book &s) {
+        Book_name = s.Book_name;
+        Author_name = s.Author_name;
+        Price = s.Price;
+        cout << "copy constructor called!!" << endl;
+    }
+    void display() {
+        cout << "Book Name: " << Book_name << "\nAuthor Name: " << Author_name << "\nPrice: " << Price << endl;
+    }
+};
+int main() {
+    Book s("Manga", "Mangaka", 200); 
+    s.display();
+    Book copyS(s);   
+    copyS.display();
+    return 0;
+}
 /*Output:-
-
+Book Name: Manga
+Author Name: Mangaka
+Price: 200
+copy constructor called!!
+Book Name: Manga
+Author Name: Mangaka
+Price: 200
 */
