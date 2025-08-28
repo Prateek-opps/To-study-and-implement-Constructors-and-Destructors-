@@ -3,5 +3,34 @@ Prateek Sinha
 24070123077
 ENTC A3
 
+#include <iostream>
+using namespace std;
+class student{
+    int age;
+    string name;
+public:
+    // Parametric constructor
+    student(string n,int a){
+        name=n;
+        age=a;
+    }
+    // Copy Constructor
+    student(const student &s){
+        name=s.name;
+        age=s.age;
+        cout<<"copy constructor called!!"<<endl;
+    }
+void display(){
+    cout<<"Name: "<<name<< " \nAge: "<<age<<endl;
+}
+};
+int main() {
+    student s("Prateek", 20);
+    s.display();  
+    return 0;
+}
+
 /*Output:-
-  */
+Name: Prateek 
+ Age: 20
+*/
