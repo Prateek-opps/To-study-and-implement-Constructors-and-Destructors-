@@ -6,9 +6,7 @@ class Car
     char carname[77];
     double mileage;
 public:
-Car();
-void display(); };
-Car::Car()
+Car()
     {
         cout<<"Enter the price :  ";      
         cin>> price;
@@ -19,11 +17,11 @@ Car::Car()
     cout<<endl;
     }   
 
-void Car::display()
+void display()
 {       cout<<"Car Details are :"<<endl;
         cout<< price <<"\n"<<carname<<"\n"<<mileage;
     }
-
+};
 
 int main()
 {
@@ -33,12 +31,12 @@ sedan.display();
  }
 
  /* output:
-Enter the price :  14000000
-Enter the Car Name :audi
+ Enter the price :  1200000
+Enter the Car Name :toyota
 Enter the mileage :
-12
+23
 
 Car Details are :
-14000000
-audi
-12*/
+1200000
+toyota
+23*/
