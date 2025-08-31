@@ -1,3 +1,9 @@
+Prateek Sinha
+
+24070123077
+
+ENTC A3
+
 # C++ Programs using Constructors, Copy Constructors & Destructors
 
 This repository contains several **Object-Oriented Programming (OOP)** examples in **C++**, demonstrating the concepts of:
